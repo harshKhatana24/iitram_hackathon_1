@@ -2,15 +2,81 @@
 <html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
 <head>
     <title>Services Page</title>
-    </head>
-<body class="bg-gray-100 text-gray-900">
+    <style>
+        body {
+            background: linear-gradient(to right, #a8e6ff, #d3f4ff);
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+        #content {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+        h1 {
+            text-align: center;
+            color: #1a237e;
+            font-size: 2.8rem;
+            margin-bottom: 200px;
+            margin-left: 100px;
+        }
+        p {
+            font-size: 100px;
+            line-height: 1.8;
+            color: #444;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 5px solid #1a237e;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(1, 1, 1, 0.1);
+            margin-left: 100px;
+            margin-bottom: 1000px;
 
-<div id="content" class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
-    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Welcome to the About Page</h1>
-    <p class="p-6 bg-gray-50 border border-gray-200 rounded-lg text-lg text-gray-700 leading-relaxed">
-        <strong class="text-gray-900">Login and Registration System - Spring Boot Project</strong><br>
-        <em class="text-gray-600">Project Overview</em><br>
-        The Login and Registration System is a Spring Boot-based web application designed to manage user authentication and account registration efficiently. It incorporates secure mechanisms for user login, registration, and role-based access control, ensuring a user-friendly and secure experience.
+        }
+        strong {
+            color: #0d47a1;
+        }
+        em {
+            color: #546e7a;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <h1>Welcome to the About Page</h1>
+    <p>
+        <strong>Login and Registration System - Spring Boot Project</strong><br>
+        <em>Project Overview</em><br>
+        Smart-Contact-Manager-SpringBoot-Project<br>
+        The Smart Contact Manager (SCM) is a feature-rich web application designed to efficiently manage personal and professional contacts. Built with modern technologies, it offers a secure and user-friendly platform for organizing and accessing contact information.
+    </p>
+    <p>
+        <strong>Key Features:</strong><br>
+        Contact Management: Add, edit, and categorize contacts into personal or professional groups for easy organization.<br>
+        Secure Authentication: Supports multiple authentication methods, including traditional email/password, Google login, and GitHub login.
+    </p>
+    <p>
+        <strong>Cloud Integration:</strong><br>
+        Cloudinary for seamless image uploads and storage, enabling users to attach profile pictures to contacts.<br>
+        Google Cloud Services for managing email-based login and communication.
+    </p>
+    <p>
+        <strong>Responsive Design:</strong><br>
+        A clean, mobile-friendly interface developed with TailwindCSS for an elegant and consistent look across devices.
+    </p>
+    <p>
+        <strong>Technologies Used:</strong><br>
+        Spring Boot: Handles the backend logic and APIs for managing contacts and authentication.<br>
+        Thymeleaf: Powers the dynamic HTML templates for smooth server-side rendering.<br>
+        TailwindCSS: Ensures responsive, modern, and visually appealing designs.<br>
+        Cloudinary: Manages multimedia uploads, particularly profile pictures for contacts.<br>
+        Google Cloud & GitHub Login: Offers secure and seamless login options through OAuth.<br>
+    </p>
+    <p>
+        With SCM, you can securely centralize and manage your contact information, making it an ideal solution for both personal and professional needs.
     </p>
 </div>
 
@@ -22,3 +88,71 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">-->
+<!--<head>-->
+<!--    <title>Services Page</title>-->
+<!--    </head>-->
+<!--<body class="bg-gray-100 text-gray-900">-->
+
+<!--<div id="content" class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">-->
+<!--    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Welcome to the About Page</h1>-->
+<!--    <p class="p-6 bg-gray-50 border border-gray-200 rounded-lg text-lg text-gray-700 leading-relaxed">-->
+<!--        <strong class="text-gray-900">Login and Registration System - Spring Boot Project</strong><br>-->
+<!--        <em class="text-gray-600">Project Overview</em><br>-->
+<!--        The Login and Registration System is a Spring Boot-based web application designed to manage user authentication and account registration efficiently. It incorporates secure mechanisms for user login, registration, and role-based access control, ensuring a user-friendly and secure experience.-->
+<!--    </p>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--    console.log("about page");-->
+<!--</script>-->
+<!--<script>-->
+<!--    console.log("second script");-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

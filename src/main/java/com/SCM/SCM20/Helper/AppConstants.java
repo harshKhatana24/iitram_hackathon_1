@@ -12,7 +12,7 @@ public class AppConstants {
 
     public static final String CONTACT_IMAGE_CROP = "fill";
 
-    public static final String CONTACT_PAZE_SIZE = "5";
+    public static final String CONTACT_PAZE_SIZE = "3";
 
 
 }

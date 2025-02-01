@@ -1,37 +1,73 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" data-th-replace="~{base :: parent(~{::#content},~{::title},~{})}">
+<html xmlns:th="http://www.thymeleaf.org"
+      data-th-replace="~{base :: parent(~{::#content},~{::title},~{})}">
 <head>
-    <title>Home Page</title>
+    <title>Smart Contact Manager</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-100 text-gray-800">
-<div id="content" class="container mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
-    <header class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-gray-900">Harsh Khatana</h1>
-        <p class="text-lg text-gray-600 mt-2">Java Developer</p>
-        <p class="text-gray-500 mt-2 italic">
-            Passionate about building efficient, scalable, and robust software solutions
-            .
-        </p>
-    </header>
 
-    <section>
-        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Explore More</h2>
-        <ul class="list-disc list-inside space-y-4">
-            <li class="text-lg">
-                <span class="font-semibold text-gray-900">YouTube Channel:</span>
-                <a th:href="'#' + ${youtubeChannel}" class="text-blue-600 hover:underline" target="_blank" th:text="${youtubeChannel}">YouTube</a>
-            </li>
-            <li class="text-lg">
-                <span class="font-semibold text-gray-900">GitHub:</span>
-                <a th:href="${gihub}" class="text-blue-600 hover:underline" target="_blank" th:text="${gihub}">GitHub</a>
-            </li>
-            <li class="text-lg">
-                <span class="font-semibold text-gray-900">Leetcode:</span>
-                <a th:href="${leetcode}" class="text-blue-600 hover:underline" target="_blank" th:text="${leetcode}">GitHub</a>
-            </li>
-        </ul>
-    </section>
+<!-- Navbar -->
+<nav class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Smart Contact Manager</h1>
+        <div>
+            <a href="/login" class="px-4 py-2 bg-white text-blue-600 rounded-lg hover:bg-gray-200 transition">Login</a>
+            <a href="/register" class="ml-2 px-4 py-2 bg-yellow-400 text-gray-800 rounded-lg hover:bg-yellow-500 transition">Sign Up</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div id="content" class="h-screen mx-auto flex items-center justify-center">
+
+    <div class="relative w-full h-full pt-10">
+        <div
+                class="absolute inset-0 bg-cover bg-center pt-10"
+                style="background-image: url('/images/support-services_1935249.png'); background-position: center center; background-size: auto;">
+            <!-- Apply background overlay using Tailwind's opacity -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div> <!-- Reduce the visibility of background image -->
+            <div class="text-center p-6 relative z-10"> <!-- Ensure text is above the overlay -->
+<!--                <h2 class="text-5xl text-opacity-100 font-semibold text-blue-700 dark:text-white">Manage Your Contacts Efficiently</h2>-->
+<!--                <p class="text-lg text-gray-600 mt-4 dark:text-white">Smart Contact Manager helps you organize and secure your contacts with ease.</p>-->
+
+                <!-- Hero Section -->
+                <div class="mt-6 flex justify-center h-15">
+                    <div><i style="font-size: 100px; padding-top: 10px;" class="fa-regular fa-address-book text-gray-700 dark:text-white"></i></div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <h3 class="text-2xl font-bold text-blue-600">Secure Storage</h3>
+                        <p class="text-gray-600 mt-4">All your contacts are securely stored with encrypted access.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <h3 class="text-2xl font-bold text-blue-600">Easy Access</h3>
+                        <p class="text-gray-600 mt-4">Access your contacts from anywhere on any device.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition">
+                        <h3 class="text-2xl font-bold text-blue-600">User-Friendly</h3>
+                        <p class="text-gray-600 mt-4">A simple and intuitive UI for seamless experience.</p>
+                    </div>
+                </div>
+
+
+                <!-- Call to Action -->
+                <div class="mt-6">
+                    <a href="/register" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Footer -->
+<footer class="mt-10 bg-gray-800 text-white text-center p-4">
+    <p>© 2025 Smart Contact Manager. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
